@@ -2,9 +2,55 @@
   text-align: center;
 }
 
-.App-header {
+.appHeader {
   background-color: #222;
-  height: 80px;
-  padding: 20px;
+  height: 100px;
   color: white;
+  text-align: center;
+}
+.headerText {
+  padding: 1px;
+}
+.appFooter {
+  background-color: #222;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+.FooterText {
+  padding: 1px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.pending {
+
+}
+
+.appContainer {
+  /*border: 1px solid black;*/
+  padding-top: 100px;
+
+}
+.todoInput {
+  padding-bottom: 10px;
+}
+
+/* overrides */
+.form-control {
+  border-radius: 0px;
+  border-color: #FFF !important;
+}
+.addBtn {
+  border-color: #FFF !important;
+}
+
+button {
+
+}
+
+.right {
+  text-align: right;
 }

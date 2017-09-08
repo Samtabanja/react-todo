@@ -22,10 +22,17 @@ export default class CreateTodo extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleCreate.bind(this)}>
-        <input type="text" placeholder="What do I need to do?" ref="createInput"/>
-        <button>Create</button>
+
+      <form className="todoInput" onSubmit={this.handleCreate.bind(this)}>
+        <div className="input-group">
+          <input className="form-control" type="text" placeholder="What do I need to do?" ref="createInput"/>
+            <div className="input-group-btn">
+              <button className="btn btn-default  addBtn">
+                <i className="fa fa-plus" aria-hidden="true"></i>
+              </button>
+            </div>
         {this.renderError()}
+        </div>
       </form>
     );
   }

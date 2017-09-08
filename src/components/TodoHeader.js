@@ -6,7 +6,7 @@ export default class TodoHeader extends React.Component {
         <thead>
           <tr>
             <th>Task</th>
-            <th>Actions</th>
+            <th className="right">Actions</th>
           </tr>
         </thead>
     )

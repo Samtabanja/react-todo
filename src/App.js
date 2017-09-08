@@ -28,10 +28,13 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>React ToDos App</h1>
-        <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)}/>
-        <TodoList todos={this.state.todos} toggleTask={this.toggleTask.bind(this)} saveTask={this.saveTask.bind(this)} deleteTask={this.deleteTask.bind(this)}/>
+      <div className="container appContainer">
+        <div className="col-md-offset-3 col-md-6">
+          <Header />
+          <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)}/>
+          <TodoList todos={this.state.todos} toggleTask={this.toggleTask.bind(this)} saveTask={this.saveTask.bind(this)} deleteTask={this.deleteTask.bind(this)}/>
+          <Footer />
+        </div>
       </div>
     );
   }

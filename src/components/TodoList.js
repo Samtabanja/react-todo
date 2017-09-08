@@ -12,7 +12,7 @@ export default class TodoList extends React.Component {
 
   render() {
     return (
-      <table>
+      <table className="table">
         <TodoHeader/>
         <tbody>
           {this.renderItems()}

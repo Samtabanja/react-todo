@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 const Header = () => {
   return (
-    <div>
-       <div>
-          <h1>Brainstation Todo App</h1>
+    <div className="appHeader">
+       <div className="headerText">
+          <h1>Brainstation Todo List</h1>
+          <p>Click on task to toggle complete</p>
        </div>
     </div>
   );
