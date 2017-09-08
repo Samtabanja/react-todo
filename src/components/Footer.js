@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="appFooter">
        <div className="footerText">
-          <p>Nic Tamura</p>
+          <p>Brainstation todo list app</p>
        </div>
     </div>
   );

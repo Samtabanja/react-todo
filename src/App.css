@@ -13,16 +13,22 @@
 }
 .appFooter {
   background-color: #222;
-  height: 100px;
+  height: 40px;
   color: white;
   text-align: center;
 }
-.FooterText {
-  padding: 1px;
+.footerText {
+  padding-top: 7px;
+}
+
+.errorMsg {
+  text-align: center;
+
 }
 
 .done {
-    text-decoration: line-through;
+  text-decoration: line-through;
+  color: #575757;
 }
 
 .pending {

@@ -4,16 +4,21 @@ import './App.css';
 import Header from './components/Header';
 import CreateTodo from './components/CreateTodo';
 import TodoList from './components/TodoList';
-
 import Footer from './components/Footer';
 
 const todos = [
   {
-    task: 'make React tutorial',
-    isCompleted: false
-  }, {
-    task: 'eat dinner',
+    task: 'make React todo list',
     isCompleted: true
+  }, {
+    task: 'style todo list',
+    isCompleted: true
+  },{
+    task: 'submit',
+    isCompleted: true
+  },{
+    task: 'eat dinner',
+    isCompleted: false
   }
 ];
 

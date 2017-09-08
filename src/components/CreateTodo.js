@@ -31,7 +31,9 @@ export default class CreateTodo extends React.Component {
                 <i className="fa fa-plus" aria-hidden="true"></i>
               </button>
             </div>
-        {this.renderError()}
+        </div>
+        <div className="errorMsg">
+          {this.renderError()}
         </div>
       </form>
     );
