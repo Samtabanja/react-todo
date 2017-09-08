@@ -4,7 +4,7 @@ export default class Filter extends React.Component {
   render(){
     return (
         <div className="pull-right">
-          <button className="btn addBtn btn-default" data-toggle="tooltip" title="Toggle complete">
+          <button className="btn addBtn btn-default disabled" data-toggle="tooltip" title="Toggle complete">
             <i className="fa fa-filter" aria-hidden="true"></i>
           </button>
         </div>

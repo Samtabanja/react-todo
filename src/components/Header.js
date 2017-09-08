@@ -5,7 +5,7 @@ const Header = () => {
     <div className="appHeader">
        <div className="headerText">
           <h1><span className="blue">React</span> Todo List</h1>
-          <p>Click on task to toggle complete</p>
+          <p className="text-muted">Click on task to toggle complete</p>
        </div>
     </div>
   );

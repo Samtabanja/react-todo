@@ -25,7 +25,7 @@ export default class CreateTodo extends React.Component {
 
       <form className="todoInput" onSubmit={this.handleCreate.bind(this)}>
         <div className="input-group">
-          <input className="form-control" type="text" placeholder="What do I need to do?" ref="createInput"/>
+          <input className="form-control" type="text" placeholder="What shall I do today?" ref="createInput"/>
             <div className="input-group-btn">
               <button className="btn btn-default addBtn">
                 <i className="fa fa-plus" aria-hidden="true"></i>
