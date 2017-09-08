@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.appContainer {
+  padding-top: 100px;
+}
 .appHeader {
   background-color: #222;
   height: 100px;
@@ -11,38 +13,32 @@
 .headerText {
   padding: 1px;
 }
+.bsLogo {
+  width: 200px;
+  height: auto;
+}
 .appFooter {
   background-color: #222;
-  height: 40px;
+  height: 70px;
   color: white;
   text-align: center;
 }
-.footerText {
-  padding-top: 7px;
-}
 
-.errorMsg {
-  text-align: center;
-
-}
 
 .done {
   text-decoration: line-through;
-  color: #575757;
+  color: #ACACAC;
+}
+.errorMsg {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.blue {
+  color: #2B96FE;
 }
 
-.pending {
-
-}
-
-.appContainer {
-  /*border: 1px solid black;*/
-  padding-top: 100px;
-
-}
-.todoInput {
-  padding-bottom: 10px;
-}
 
 /* overrides */
 .form-control {
@@ -51,12 +47,4 @@
 }
 .addBtn {
   border-color: #FFF !important;
-}
-
-button {
-
-}
-
-.right {
-  text-align: right;
 }

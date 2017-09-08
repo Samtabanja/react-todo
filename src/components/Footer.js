@@ -3,9 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <div className="appFooter">
-       <div className="footerText">
-          <p>Brainstation todo list app</p>
-       </div>
+      <img src={'http://tiffanydasilva.com/wp-content/uploads/2017/03/Brainstation.png'} alt="boohoo" className="bsLogo"/>
     </div>
   );
 }

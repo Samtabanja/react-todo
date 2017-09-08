@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+// import _ from 'lodash';
 
 export default class TodoListItem extends React.Component {
   constructor(props) {
@@ -12,13 +12,7 @@ export default class TodoListItem extends React.Component {
 
   renderTaskSection() {
     const {task, isCompleted} = this.props;
-
-    const taskStyle = {
-      color: isCompleted
-        ? 'green'
-        : 'red',
-      cursor: 'pointer'
-    };
+    const taskStyle =  isCompleted ? 'done' : ''
 
     if (this.state.isEditing) {
       return (
@@ -30,7 +24,7 @@ export default class TodoListItem extends React.Component {
       );
     }
     return (
-      <td style={taskStyle} onClick={this.props.toggleTask.bind(this, task)}>
+      <td className={taskStyle} onClick={this.props.toggleTask.bind(this, task)}>
         {task}
       </td>
     );
@@ -39,16 +33,16 @@ export default class TodoListItem extends React.Component {
     if (this.state.isEditing) {
       return (
         <td>
-          <button className="pull-right btn btn-info" onClick={this.onSaveClick.bind(this)}>Save</button>
-          <button className="pull-right btn btn-default" onClick={this.onCancelClick.bind(this)}>Cancel</button>
+          <button className="pull-right btn btn-sm btn-info" onClick={this.onSaveClick.bind(this)}>Save</button>
+          <button className="pull-right btn btn-sm btn-default" onClick={this.onCancelClick.bind(this)}>Cancel</button>
         </td>
       );
     }
 
     return (
       <td>
-        <button className="pull-right btn btn-default" onClick={this.onEditClick.bind(this)}>Edit</button>
-        <button className="pull-right btn btn-default" onClick={this.props.deleteTask.bind(this, this.props.task)}>Delete</button>
+        <button className="pull-right btn btn-sm btn-default" onClick={this.onEditClick.bind(this)}>Edit</button>
+        <button className="pull-right btn btn-sm btn-default" onClick={this.props.deleteTask.bind(this, this.props.task)}>Delete</button>
       </td>
     );
   }

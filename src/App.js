@@ -3,6 +3,7 @@ import _ from 'lodash';
 import './App.css';
 import Header from './components/Header';
 import CreateTodo from './components/CreateTodo';
+import Filter from './components/Filter';
 import TodoList from './components/TodoList';
 import Footer from './components/Footer';
 
@@ -11,6 +12,9 @@ const todos = [
     task: 'make React todo list',
     isCompleted: true
   }, {
+    task: 'click on item to complete',
+    isCompleted: false
+  },{
     task: 'style todo list',
     isCompleted: true
   },{
@@ -34,9 +38,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="container appContainer">
-        <div className="col-md-offset-3 col-md-6">
+        <div className="col-md-offset-2 col-md-8">
           <Header />
           <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)}/>
+          <Filter />
           <TodoList todos={this.state.todos} toggleTask={this.toggleTask.bind(this)} saveTask={this.saveTask.bind(this)} deleteTask={this.deleteTask.bind(this)}/>
           <Footer />
         </div>
