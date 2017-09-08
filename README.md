@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-![sample](https://raw.githubusercontent.com/nTamura/react-todo/master/img/screen.png)
+![sample](https://raw.githubusercontent.com/nTamura/react-todo/master/public/screen.png)
 
 Task
 Build a simple Todo app using React. It is client-side only, so you should track all state inside of your app.
