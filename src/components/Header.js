@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Header extends Component {
-  render(){
-    return(
-      <div>
-        <p>Brainstation Todo App</p>
-      </div>
-    )
-  }
+const Header = () => {
+  return (
+    <div>
+       <div>
+          <h1>Brainstation Todo App</h1>
+       </div>
+    </div>
+  );
 }
 
 export default Header;

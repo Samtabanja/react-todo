@@ -1,37 +1,60 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import _ from 'lodash';
 import './App.css';
-import List from './components/List';
+import Header from './components/Header';
+import CreateTodo from './components/CreateTodo';
+import TodoList from './components/TodoList';
 
-export default class App extends Component {
+import Footer from './components/Footer';
+
+const todos = [
+  {
+    task: 'make React tutorial',
+    isCompleted: false
+  }, {
+    task: 'eat dinner',
+    isCompleted: true
+  }
+];
+
+export default class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      term: '',
-      items: []
+      todos
     };
-  }
-
-  onChange = (event) => {
-    this.setState({ term: event.target.value });
-  }
-
-  onSubmit = (event) => {
-    event.preventDefault();
-    this.setState({
-      term: '',
-      items: [...this.state.items, this.state.term]
-    });
   }
 
   render() {
     return (
       <div>
-        <form className="App" onSubmit={this.onSubmit}>
-          <input value={this.state.term} onChange={this.onChange} />
-          <button>Submit</button>
-        </form>
-        <List items={this.state.items} />
+        <h1>React ToDos App</h1>
+        <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)}/>
+        <TodoList todos={this.state.todos} toggleTask={this.toggleTask.bind(this)} saveTask={this.saveTask.bind(this)} deleteTask={this.deleteTask.bind(this)}/>
       </div>
     );
+  }
+
+  toggleTask(task) {
+    const foundTodo = _.find(this.state.todos, todo => todo.task === task);
+    foundTodo.isCompleted = !foundTodo.isCompleted;
+    this.setState({todos: this.state.todos});
+  }
+
+  createTask(task) {
+    this.state.todos.push({task, isCompleted: false});
+    this.setState({todos: this.state.todos});
+  }
+
+  saveTask(oldTask, newTask) {
+    const foundTodo = _.find(this.state.todos, todo => todo.task === oldTask);
+    foundTodo.task = newTask;
+    this.setState({todos: this.state.todos});
+  }
+
+  deleteTask(taskToDelete) {
+    _.remove(this.state.todos, todo => todo.task === taskToDelete);
+    this.setState({todos: this.state.todos});
   }
 }

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class Footer extends Component {
-  render(){
-    return(
-      <div>
-        <p>NicTamura - Brainstation Assignment</p>
-      </div>
-    )
-  }
+const Footer = () => {
+  return (
+    <div>
+       <div>
+          <p>Nic Tamura</p>
+       </div>
+    </div>
+  );
 }
 
 export default Footer;
